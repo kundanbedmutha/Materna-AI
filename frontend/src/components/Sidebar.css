@@ -1,0 +1,124 @@
+.sidebar {
+  width: 300px;
+  flex-shrink: 0;
+  background: var(--white);
+  border-right: 1.5px solid var(--warm);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+.sidebar.closed { width: 0; opacity: 0; pointer-events: none; }
+.sidebar.open   { opacity: 1; }
+
+.sidebar-scroll {
+  flex: 1; overflow-y: auto; padding: 16px;
+  display: flex; flex-direction: column; gap: 4px;
+}
+
+/* Fetal size card */
+.fetal-card {
+  display: flex; align-items: center; gap: 14px;
+  background: linear-gradient(135deg, var(--rose-lt) 0%, var(--cream) 100%);
+  border: 1.5px solid var(--rose-lt);
+  border-radius: var(--radius); padding: 14px 16px;
+  margin-bottom: 8px;
+}
+.fetal-emoji { font-size: 36px; line-height: 1; }
+.fetal-info  { display: flex; flex-direction: column; gap: 2px; }
+.fetal-week  { font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px; color: var(--rose-dk); font-weight: 500; }
+.fetal-name  { font-family: 'Playfair Display', serif; font-size: 15px; color: var(--ink); font-weight: 600; }
+.fetal-size  { font-size: 12px; color: var(--ink-lt); font-weight: 300; }
+
+/* Section blocks */
+.section-block {
+  padding: 12px 0 16px;
+  border-bottom: 1px solid var(--cream-dk);
+  display: flex; flex-direction: column; gap: 10px;
+}
+.section-block:last-of-type { border-bottom: none; }
+.section-title {
+  font-size: 11px; font-weight: 500;
+  text-transform: uppercase; letter-spacing: 1px;
+  color: var(--ink-lt);
+}
+
+/* Trimester progress */
+.progress-track-wrap { display: flex; flex-direction: column; gap: 4px; }
+.progress-track { display: flex; gap: 4px; height: 6px; border-radius: 3px; overflow: hidden; }
+.progress-segment { flex: 1; border-radius: 3px; transition: background 0.3s; }
+.progress-labels {
+  display: flex; justify-content: space-between;
+  font-size: 10px; color: var(--ink-lt); padding: 0 2px;
+}
+
+/* Sliders */
+.slider-row { display: flex; flex-direction: column; gap: 6px; }
+.slider-top  { display: flex; justify-content: space-between; align-items: center; }
+.slider-label { font-size: 13px; color: var(--ink-md); font-weight: 400; }
+.slider-val   { font-size: 13px; color: var(--rose); font-weight: 500; font-variant-numeric: tabular-nums; }
+
+.range-input {
+  -webkit-appearance: none; width: 100%; height: 4px;
+  border-radius: 2px; background: var(--warm); outline: none; cursor: pointer;
+}
+.range-input::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 16px; height: 16px;
+  border-radius: 50%; background: var(--rose);
+  border: 2px solid var(--white); box-shadow: 0 1px 4px rgba(201,112,106,0.35);
+  cursor: pointer; transition: transform 0.15s;
+}
+.range-input::-webkit-slider-thumb:hover { transform: scale(1.15); }
+
+/* Toggles */
+.toggle-row {
+  display: flex; align-items: center; justify-content: space-between;
+}
+.toggle-label { font-size: 13px; color: var(--ink-md); }
+.toggle { position: relative; cursor: pointer; }
+.toggle input { opacity: 0; width: 0; height: 0; position: absolute; }
+.toggle-track {
+  display: block; width: 34px; height: 20px; border-radius: 10px;
+  background: var(--warm); transition: background 0.2s; position: relative;
+}
+.toggle input:checked + .toggle-track { background: var(--rose); }
+.toggle-thumb {
+  position: absolute; top: 3px; left: 3px;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--white); transition: transform 0.2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.toggle input:checked + .toggle-track .toggle-thumb { transform: translateX(14px); }
+
+/* Vitals alert */
+.vitals-alert {
+  font-size: 12px; color: var(--urgent);
+  background: var(--urgent-lt); border-radius: 8px;
+  padding: 8px 12px; border-left: 3px solid var(--urgent);
+}
+
+/* Risk bars */
+.risk-section { background: var(--cream); border-radius: var(--radius); padding: 14px; margin: 0 -4px; }
+.risk-note    { font-size: 11px; color: var(--ink-lt); font-style: italic; }
+.risk-bar-row { display: flex; flex-direction: column; gap: 5px; }
+.risk-bar-top { display: flex; justify-content: space-between; font-size: 12px; }
+.risk-bar-label { color: var(--ink-md); }
+.risk-bar-level { font-weight: 500; font-size: 11px; }
+.risk-track { height: 5px; border-radius: 3px; background: var(--warm); overflow: hidden; }
+.risk-fill  { height: 100%; border-radius: 3px; transition: width 0.5s ease; }
+
+/* Sources */
+.sources-row  { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 4px; }
+.sources-label { font-size: 11px; color: var(--ink-lt); }
+.source-chip  {
+  font-size: 10px; padding: 2px 8px; border-radius: 10px;
+  background: var(--sage-lt); color: var(--sage-dk);
+  border: 1px solid var(--sage-lt);
+}
+
+/* Footer */
+.sidebar-footer {
+  margin-top: auto; padding-top: 16px;
+  font-size: 11px; color: var(--ink-lt); line-height: 1.6;
+  border-top: 1px solid var(--warm);
+}

@@ -1,0 +1,26 @@
+{
+  "model_key": "ppd",
+  "label": "PPD Risk",
+  "features": [
+    "age",
+    "bmi_prepregnancy",
+    "gestational_week",
+    "trimester",
+    "risk_depression_hx",
+    "risk_smoking",
+    "sdoh_low_income",
+    "sdoh_unmarried",
+    "sdoh_low_education",
+    "symptom_nausea",
+    "symptom_back_pain",
+    "systolic_bp",
+    "diastolic_bp",
+    "weight_gain_lb"
+  ],
+  "target": "outcome_ppd",
+  "roc_auc": 0.661,
+  "cv_auc_mean": 0.64,
+  "cv_auc_std": 0.013,
+  "n_train": 4000,
+  "n_test": 1000
+}

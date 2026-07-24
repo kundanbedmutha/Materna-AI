@@ -1,0 +1,26 @@
+{
+  "model_key": "preterm",
+  "label": "Preterm Birth Risk",
+  "features": [
+    "age",
+    "bmi_prepregnancy",
+    "gestational_week",
+    "risk_prev_preterm",
+    "risk_gestational_diabetes",
+    "risk_hypertension",
+    "risk_smoking",
+    "sdoh_low_income",
+    "sdoh_low_education",
+    "symptom_back_pain",
+    "symptom_reduced_fetal_movement",
+    "systolic_bp",
+    "diastolic_bp",
+    "weight_gain_lb"
+  ],
+  "target": "outcome_preterm",
+  "roc_auc": 0.547,
+  "cv_auc_mean": 0.577,
+  "cv_auc_std": 0.018,
+  "n_train": 4000,
+  "n_test": 1000
+}

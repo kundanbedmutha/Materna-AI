@@ -1,0 +1,258 @@
+.food-page {
+  flex: 1; overflow-y: auto; padding: 36px 48px;
+  display: flex; flex-direction: column; gap: 24px;
+}
+
+.food-header { display: flex; align-items: center; gap: 16px; }
+.food-header-icon { font-size: 36px; }
+.food-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px; font-weight: 600; color: var(--ink);
+}
+.food-sub { font-size: 14px; color: var(--ink-lt); margin-top: 4px; }
+
+.food-section { display: flex; flex-direction: column; gap: 14px; }
+.food-section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px; font-weight: 600; color: var(--ink);
+}
+
+/* Diet tabs */
+.diet-tabs { display: flex; gap: 12px; }
+.diet-tab {
+  display: flex; align-items: center; gap: 8px;
+  padding: 12px 24px; border-radius: 16px;
+  border: 1.5px solid var(--warm); background: var(--white);
+  font-family: 'DM Sans', sans-serif; font-size: 14px;
+  color: var(--ink-lt); cursor: pointer; transition: all 0.2s;
+}
+.diet-tab:hover { border-color: var(--rose); color: var(--ink); }
+.diet-tab.active {
+  background: var(--rose-lt); border-color: var(--rose);
+  color: var(--rose-dk); font-weight: 500;
+  box-shadow: 0 3px 12px rgba(201,112,106,0.2);
+}
+.diet-icon { font-size: 18px; }
+
+/* Feeling grid */
+.feeling-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
+}
+@media (max-width: 700px) { .feeling-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.feeling-btn {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  padding: 16px 8px; border-radius: 16px;
+  border: 1.5px solid var(--warm); background: var(--white);
+  cursor: pointer; transition: all 0.2s;
+  font-family: 'DM Sans', sans-serif;
+}
+.feeling-btn:hover { border-color: var(--rose); transform: translateY(-2px); }
+.feeling-btn.active {
+  background: var(--rose-lt); border-color: var(--rose);
+  box-shadow: 0 4px 16px rgba(201,112,106,0.2);
+}
+.feeling-emoji { font-size: 26px; }
+.feeling-label { font-size: 12px; color: var(--ink-md); text-align: center; line-height: 1.3; }
+
+/* Recommendation card */
+.rec-card {
+  background: var(--white); border: 1.5px solid var(--rose);
+  border-radius: 20px; padding: 28px;
+  display: flex; flex-direction: column; gap: 20px;
+  box-shadow: 0 4px 20px rgba(201,112,106,0.15);
+}
+.rec-header { display: flex; flex-direction: column; gap: 6px; }
+.rec-trimester-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 11px; font-weight: 500; text-transform: uppercase;
+  letter-spacing: 0.8px; color: var(--rose);
+  background: var(--rose-lt); border-radius: 20px; padding: 4px 12px;
+  align-self: flex-start;
+}
+.rec-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px; font-weight: 600; color: var(--ink);
+}
+.rec-foods {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;
+}
+.rec-food-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 14px; border-radius: 12px;
+  background: var(--cream); border: 1px solid var(--cream-dk);
+  font-size: 13px; color: var(--ink-md);
+}
+.rec-food-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--rose); flex-shrink: 0;
+}
+.rec-tip {
+  display: flex; gap: 12px; align-items: flex-start;
+  background: var(--sage-lt); border-radius: 14px; padding: 16px;
+  border-left: 3px solid var(--sage);
+}
+.rec-tip-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+.rec-tip p { font-size: 13px; color: var(--sage-dk); line-height: 1.7; margin: 0; }
+
+/* Placeholder */
+.food-placeholder {
+  text-align: center; padding: 40px;
+  color: var(--ink-lt); font-size: 14px; line-height: 1.6;
+}
+.food-placeholder-emoji { font-size: 40px; margin-bottom: 12px; }
+
+/* Nutrients */
+.nutrients-section {
+  background: var(--cream); border-radius: 20px;
+  padding: 24px; border: 1px solid var(--warm);
+}
+.nutrients-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+}
+@media (max-width: 700px) { .nutrients-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.nutrient-card {
+  background: var(--white); border: 1px solid var(--warm);
+  border-radius: 14px; padding: 16px;
+  display: flex; flex-direction: column; gap: 6px;
+  text-align: center;
+}
+.nutrient-icon  { font-size: 24px; }
+.nutrient-name  { font-size: 13px; font-weight: 500; color: var(--ink); }
+.nutrient-why   { font-size: 11px; color: var(--ink-lt); line-height: 1.4; }
+.nutrient-amount { font-size: 12px; color: var(--rose); font-weight: 500; margin-top: 4px; }
+
+.food-disclaimer {
+  font-size: 12px; color: var(--ink-lt);
+  background: var(--cream); border-radius: 12px;
+  padding: 14px 18px; line-height: 1.6;
+  border-left: 3px solid var(--amber);
+}
+
+/* ── Medical notes ──────────────────────────────── */
+.med-notes {
+  margin: 0 48px;
+  background: #FEF9E7;
+  border: 1.5px solid #D68910;
+  border-radius: 14px;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.med-notes-title {
+  font-size: 12px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.7px;
+  color: var(--watch);
+}
+.med-note-pill {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 13px; color: var(--ink-md);
+}
+
+/* ── Recipe count badge ─────────────────────────── */
+.recipe-count {
+  font-size: 12px; font-weight: 400;
+  background: var(--rose-lt); color: var(--rose-dk);
+  border-radius: 20px; padding: 2px 10px;
+  margin-left: 10px; vertical-align: middle;
+}
+
+/* ── Recipe list ─────────────────────────────────── */
+.recipes-list {
+  display: flex; flex-direction: column; gap: 12px;
+}
+
+/* ── Recipe card ─────────────────────────────────── */
+.recipe-card {
+  background: var(--white);
+  border: 1.5px solid var(--warm);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.recipe-card.open {
+  border-color: var(--rose);
+  box-shadow: 0 4px 20px rgba(201,112,106,0.13);
+}
+
+.recipe-header {
+  width: 100%; display: flex;
+  align-items: center; justify-content: space-between;
+  padding: 18px 22px; background: none; border: none;
+  cursor: pointer; text-align: left;
+  font-family: 'DM Sans', sans-serif;
+  transition: background 0.15s;
+}
+.recipe-header:hover { background: var(--cream); }
+.recipe-header-left { display: flex; align-items: center; gap: 14px; }
+.recipe-emoji { font-size: 32px; flex-shrink: 0; }
+.recipe-name {
+  font-size: 16px; font-weight: 500;
+  color: var(--ink); margin-bottom: 4px;
+}
+.recipe-meta {
+  display: flex; gap: 14px;
+  font-size: 12px; color: var(--ink-lt);
+}
+.recipe-chevron {
+  font-size: 12px; color: var(--ink-lt);
+  flex-shrink: 0;
+}
+
+/* ── Recipe body ─────────────────────────────────── */
+.recipe-body {
+  padding: 0 22px 22px;
+  display: flex; flex-direction: column; gap: 20px;
+  animation: fadeUp 0.25s ease;
+}
+
+.recipe-section { display: flex; flex-direction: column; gap: 10px; }
+.recipe-section-title {
+  font-size: 13px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.8px;
+  color: var(--ink-md);
+}
+
+/* Ingredients */
+.ingredients-list {
+  list-style: none; padding: 0;
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px;
+}
+.ingredients-list li {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 13px; color: var(--ink-md);
+  padding: 7px 12px;
+  background: var(--cream); border-radius: 8px;
+}
+.ingredients-list li::before {
+  content: '•'; color: var(--rose);
+  font-weight: 700; flex-shrink: 0;
+}
+
+/* Steps */
+.steps-list {
+  list-style: none; padding: 0;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.steps-list li {
+  display: flex; gap: 12px; align-items: flex-start;
+  font-size: 13px; color: var(--ink-md); line-height: 1.6;
+}
+.step-num {
+  flex-shrink: 0;
+  width: 24px; height: 24px; border-radius: 50%;
+  background: var(--rose-lt); color: var(--rose-dk);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 600; margin-top: 1px;
+}
+
+/* Note */
+.recipe-note {
+  display: flex; gap: 10px; align-items: flex-start;
+  background: var(--sage-lt); border-radius: 12px;
+  padding: 14px 16px; border-left: 3px solid var(--sage);
+}
+.recipe-note-icon { font-size: 17px; flex-shrink: 0; margin-top: 1px; }
+.recipe-note p { font-size: 13px; color: var(--sage-dk); line-height: 1.7; margin: 0; }

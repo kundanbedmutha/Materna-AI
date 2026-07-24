@@ -1,0 +1,166 @@
+[
+  {
+    "id": "kb_001",
+    "symptom": "swelling ankles feet hands",
+    "trimester": [
+      2,
+      3
+    ],
+    "urgency": "watch",
+    "title": "Oedema (swelling) in pregnancy",
+    "clinical_context": "Mild dependent oedema affects 50-80% of pregnancies in the third trimester due to increased blood volume and uterine pressure on the inferior vena cava. Physiological swelling is symmetric, pitting, and worsens by end of day.",
+    "red_flags": [
+      "sudden onset",
+      "facial swelling",
+      "swelling with headache",
+      "swelling with visual disturbance",
+      "unilateral leg swelling suggesting DVT"
+    ],
+    "guidance": "Elevate feet, reduce sodium intake, avoid prolonged standing, stay hydrated. Report immediately if combined with headache or visual changes \u2014 possible preeclampsia.",
+    "icd10": "O26.89",
+    "source": "ACOG Practice Bulletin No. 202"
+  },
+  {
+    "id": "kb_002",
+    "symptom": "headache severe blurry vision visual disturbance",
+    "trimester": [
+      2,
+      3
+    ],
+    "urgency": "urgent",
+    "title": "Preeclampsia warning signs",
+    "clinical_context": "Persistent headache unrelieved by paracetamol combined with visual disturbances (blurring, photopsia, scotomata) after 20 weeks gestation are cardinal warning signs of preeclampsia / HELLP syndrome. Blood pressure \u2265140/90 confirms the diagnosis.",
+    "red_flags": [
+      "BP \u2265140/90",
+      "epigastric pain",
+      "sudden severe headache",
+      "vision changes",
+      "severe swelling"
+    ],
+    "guidance": "Seek emergency obstetric care immediately. Do not wait. Measure BP if possible. Preeclampsia can progress to eclampsia (seizures) and HELLP syndrome within hours.",
+    "icd10": "O14.9",
+    "source": "ACOG Practice Bulletin No. 222"
+  },
+  {
+    "id": "kb_003",
+    "symptom": "back pain lower back",
+    "trimester": [
+      1,
+      2,
+      3
+    ],
+    "urgency": "normal",
+    "title": "Low back pain in pregnancy",
+    "clinical_context": "Affects 50-70% of pregnant women. Caused by progesterone-driven ligament laxity, postural compensations for shifting centre of gravity, and weight of the gravid uterus. Usually begins in the second trimester and peaks in the third.",
+    "red_flags": [
+      "fever >38\u00b0C",
+      "dysuria with back pain (pyelonephritis)",
+      "sudden severe pain with contractions",
+      "leg numbness or weakness"
+    ],
+    "guidance": "Prenatal yoga, pelvic tilt exercises, pregnancy pillow, low-heeled supportive footwear, warm compress (not hot). Physiotherapy referral for severe cases.",
+    "icd10": "O26.71",
+    "source": "ACOG Committee Opinion No. 650"
+  },
+  {
+    "id": "kb_004",
+    "symptom": "reduced fetal movement baby not moving kick count low",
+    "trimester": [
+      3
+    ],
+    "urgency": "urgent",
+    "title": "Decreased fetal movement",
+    "clinical_context": "Fetal movement perception begins at 16-20 weeks. After 28 weeks, \u226510 distinct movements within 2 hours is the standard threshold (Cardiff method). Decreased movement can indicate fetal compromise, placental insufficiency, or umbilical cord issues.",
+    "red_flags": [
+      "< 10 movements in 2 hours",
+      "no movement for >12 hours",
+      "sudden cessation after regular pattern"
+    ],
+    "guidance": "Lie on left side, drink cold water or sweet juice, count kicks. If <10 in 2 hours \u2192 call your provider or go to L&D for CTG (cardiotocography) monitoring immediately. Do not wait until tomorrow.",
+    "icd10": "O36.8",
+    "source": "ACOG Practice Bulletin No. 229"
+  },
+  {
+    "id": "kb_005",
+    "symptom": "nausea vomiting morning sickness",
+    "trimester": [
+      1,
+      2,
+      3
+    ],
+    "urgency": "normal",
+    "title": "Nausea and vomiting in pregnancy",
+    "clinical_context": "Nausea affects 70-80% of pregnancies, typically peaking at 8-10 weeks. Caused by rapidly rising hCG levels. Third-trimester nausea can be due to gastric compression by the uterus. Hyperemesis gravidarum (severe vomiting causing dehydration/weight loss) requires hospitalisation.",
+    "red_flags": [
+      "inability to keep any fluids down for >24 hours",
+      "dark urine",
+      "weight loss >5%",
+      "blood in vomit"
+    ],
+    "guidance": "Small frequent meals, ginger tea, vitamin B6 (10-25mg), avoiding triggers. If severe: antiemetics (ondansetron), IV fluids. Rest on left side to reduce reflux.",
+    "icd10": "O21.0",
+    "source": "ACOG Practice Bulletin No. 189"
+  },
+  {
+    "id": "kb_006",
+    "symptom": "bleeding spotting vaginal bleeding",
+    "trimester": [
+      1,
+      2,
+      3
+    ],
+    "urgency": "urgent",
+    "title": "Antepartum haemorrhage",
+    "clinical_context": "Any vaginal bleeding after 24 weeks is antepartum haemorrhage (APH) until proven otherwise. Major causes include placenta praevia (painless) and placental abruption (painful with board-like rigidity). First-trimester bleeding affects 20% of pregnancies \u2014 threatened miscarriage or implantation.",
+    "red_flags": [
+      "heavy bleeding (soaking a pad in 1 hour)",
+      "bleeding with severe pain",
+      "blood clots",
+      "dizziness or fainting"
+    ],
+    "guidance": "Any significant bleeding \u2192 go to emergency obstetric unit immediately. Light spotting in first trimester \u2192 contact your midwife same day. Never ignore bleeding.",
+    "icd10": "O46.9",
+    "source": "ACOG Practice Bulletin No. 175"
+  },
+  {
+    "id": "kb_007",
+    "symptom": "depression anxiety mood sadness crying postpartum",
+    "trimester": [
+      1,
+      2,
+      3
+    ],
+    "urgency": "watch",
+    "title": "Perinatal depression and anxiety",
+    "clinical_context": "Perinatal depression affects 10-15% during pregnancy and 10-20% postpartum. The Edinburgh Postnatal Depression Scale (EPDS) is the standard screening tool (score \u226513 = likely depression). Risk factors: history of depression, low social support, stressful life events, unintended pregnancy.",
+    "red_flags": [
+      "thoughts of self-harm or suicide",
+      "inability to care for self or baby",
+      "psychosis",
+      "EPDS score \u226513"
+    ],
+    "guidance": "Talk to your OB or midwife about EPDS screening. CBT is first-line for mild-moderate. SSRIs (sertraline) are considered safe in pregnancy for moderate-severe. Social support and peer programs are highly effective.",
+    "icd10": "F53.0",
+    "source": "ACOG Committee Opinion No. 757"
+  },
+  {
+    "id": "kb_008",
+    "symptom": "contractions cramping preterm labor",
+    "trimester": [
+      2,
+      3
+    ],
+    "urgency": "urgent",
+    "title": "Preterm labour",
+    "clinical_context": "Defined as regular contractions with cervical change before 37 weeks. Signs: uterine contractions \u22654 per hour, pelvic pressure, low backache, cervical dilation. Preterm birth accounts for 75% of neonatal deaths. Tocolytics, corticosteroids for lung maturity, and magnesium sulphate for neuroprotection are standard care.",
+    "red_flags": [
+      "regular contractions <37 weeks",
+      "watery discharge (possible PPROM)",
+      "pelvic pressure increasing",
+      "cervical dilation"
+    ],
+    "guidance": "Call your provider immediately or go to L&D if you are <37 weeks with regular contractions. Time contractions: if 4+ per hour \u2192 do not wait. Hydrate and lie on left side while en route.",
+    "icd10": "O60.1",
+    "source": "ACOG Practice Bulletin No. 234"
+  }
+]

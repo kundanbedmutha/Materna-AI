@@ -1,0 +1,155 @@
+.home-page {
+  flex: 1; overflow-y: auto;
+  display: flex; flex-direction: column; gap: 0;
+}
+
+/* ── Hero ─────────────────────────────────────────── */
+.hero {
+  position: relative; overflow: hidden;
+  background: linear-gradient(140deg, #FDF6F0 0%, #F9EEE8 55%, #F2E8F0 100%);
+  padding: 56px 52px 48px;
+  border-bottom: 1.5px solid var(--warm);
+  min-height: 220px;
+}
+.hero-petals { position: absolute; inset: 0; pointer-events: none; }
+.hero-petal {
+  position: absolute; width: 70px; height: 70px;
+  border-radius: 50% 0 50% 0;
+  background: var(--rose-lt); opacity: 0.35;
+  animation: float linear infinite;
+}
+.hero-content { position: relative; z-index: 1; max-width: 600px; }
+.hero-greeting { font-size: 15px; color: var(--rose); font-weight: 500; margin-bottom: 12px; letter-spacing: 0.2px; }
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px; font-weight: 600;
+  color: var(--ink); line-height: 1.18; margin-bottom: 16px;
+}
+.hero-accent { color: var(--rose); font-style: italic; }
+.hero-sub { font-size: 15px; color: var(--ink-md); font-weight: 300; line-height: 1.65; }
+
+/* ── Sections ─────────────────────────────────────── */
+.home-section { padding: 36px 52px; border-bottom: 1px solid var(--cream-dk); }
+.section-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 21px; font-weight: 600; color: var(--ink);
+  margin-bottom: 22px;
+}
+
+/* ── Quote ticker ─────────────────────────────────── */
+.ticker-wrap {
+  overflow: hidden;
+  width: 100%;
+  cursor: default;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+.ticker-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: ticker-scroll 40s linear infinite;
+}
+.ticker-track:hover { animation-play-state: paused; }
+
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker-card {
+  flex-shrink: 0;
+  width: 320px;
+  background: var(--white);
+  border: 1.5px solid var(--rose-lt);
+  border-radius: 18px;
+  padding: 24px 26px;
+  position: relative;
+}
+.ticker-quote-mark {
+  font-family: 'Playfair Display', serif;
+  font-size: 64px; color: var(--rose-lt);
+  line-height: 0.55;
+  position: absolute; top: 18px; left: 20px;
+  pointer-events: none;
+}
+.ticker-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 14px; font-style: italic;
+  color: var(--ink); line-height: 1.7;
+  padding-left: 12px; margin: 0 0 12px;
+}
+.ticker-author {
+  font-size: 12px; color: var(--rose);
+  font-weight: 500; padding-left: 12px;
+}
+
+/* ── Feature grid ─────────────────────────────────── */
+.feature-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+}
+.feature-card {
+  background: var(--white); border: 1.5px solid var(--warm);
+  border-radius: 18px; padding: 24px;
+  text-align: left; cursor: pointer;
+  display: flex; flex-direction: column; gap: 8px;
+  transition: all 0.2s; font-family: 'DM Sans', sans-serif;
+}
+.feature-card:hover {
+  border-color: var(--rose); transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(201,112,106,0.15);
+}
+.feature-icon  { font-size: 28px; }
+.feature-title { font-size: 16px; font-weight: 500; color: var(--ink); }
+.feature-desc  { font-size: 13px; color: var(--ink-lt); line-height: 1.6; flex: 1; }
+.feature-cta   { font-size: 13px; color: var(--rose); font-weight: 500; margin-top: 4px; }
+
+/* ── Fetal journey ────────────────────────────────── */
+.milestone-scroll {
+  display: flex; gap: 12px; overflow-x: auto; padding-bottom: 8px;
+  scrollbar-width: thin;
+}
+.milestone-card {
+  flex-shrink: 0; width: 100px;
+  background: var(--white); border: 1.5px solid var(--warm);
+  border-radius: 16px; padding: 14px 10px;
+  text-align: center; display: flex; flex-direction: column;
+  align-items: center; gap: 4px;
+  opacity: 0.45; transition: all 0.2s;
+}
+.milestone-card.passed  { opacity: 0.72; }
+.milestone-card.current {
+  opacity: 1; border-color: var(--rose);
+  background: var(--rose-lt);
+  box-shadow: 0 4px 16px rgba(201,112,106,0.2);
+  width: 128px;
+}
+.milestone-emoji { font-size: 26px; }
+.milestone-week  { font-size: 10px; color: var(--ink-lt); text-transform: uppercase; letter-spacing: 0.5px; }
+.milestone-label { font-size: 12px; font-weight: 500; color: var(--ink-md); }
+.milestone-fact  { font-size: 11px; color: var(--rose-dk); line-height: 1.4; margin-top: 4px; }
+
+/* ── Books ────────────────────────────────────────── */
+.books-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+}
+.book-card {
+  border: 1.5px solid; border-radius: 16px; padding: 20px;
+  display: flex; flex-direction: column; gap: 6px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.book-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(44,35,24,0.1); }
+.book-emoji  { font-size: 26px; margin-bottom: 4px; }
+.book-tag    { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.7px; }
+.book-title  { font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 600; color: var(--ink); line-height: 1.4; }
+.book-author { font-size: 12px; color: var(--ink-lt); }
+
+/* ── Daily tips ───────────────────────────────────── */
+.tips-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.tip-pill {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--white); border: 1px solid var(--warm);
+  border-radius: 12px; padding: 12px 16px;
+}
+.tip-icon { font-size: 20px; flex-shrink: 0; }
+.tip-text { font-size: 13px; color: var(--ink-md); line-height: 1.4; }
