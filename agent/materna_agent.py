@@ -91,9 +91,16 @@ class RiskScorer:
             model_path = MODELS_DIR / f"{key}_model.joblib"
             meta_path = MODELS_DIR / f"{key}_meta.json"
             if model_path.exists():
-                self.models[key] = joblib.load(model_path)
-                with open(meta_path) as f:
-                    self.meta[key] = json.load(f)
+                try:
+                    self.models[key] = joblib.load(model_path)
+                except Exception as e:
+                    print(f"[RiskScorer] Could not load pre-trained {key}_model.joblib ({e}).")
+            if meta_path.exists():
+                try:
+                    with open(meta_path) as f:
+                        self.meta[key] = json.load(f)
+                except Exception as e:
+                    print(f"[RiskScorer] Error reading {key}_meta.json: {e}")
         print(f"[RiskScorer] Loaded {len(self.models)} risk models")
 
     def score(self, patient_context: dict) -> dict:
